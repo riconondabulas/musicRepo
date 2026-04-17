@@ -1,6 +1,9 @@
 package com.example.musicapp
 
-class Song {
+
+import android.util.Log
+
+class Song (songName: String, songArtist: String, songYear: Int, songDuration: String) {
 
 
     //adding variables for the object's attributes
@@ -9,6 +12,13 @@ class Song {
     var year : Int = 0
     var duration : String = ""
 
+    //initialising the variables for the song objects
+    init{
+        name = songName
+        artist = songArtist
+        year= songYear
+        duration= songDuration
+    }
 
     //function to play a song
     fun Play() {
@@ -27,7 +37,7 @@ class Song {
 
     }
 
-    
+
     //function to favourite a song
     fun Favourite(): Boolean{
         Log.v("Song","$name is favourited now")
